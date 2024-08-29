@@ -14,16 +14,8 @@ const app = Vue.createApp({
         toggleShowBooks() {
             this.showBooks = !this.showBooks
         },
-        handleEvent(event, data) {
-            if (data) {
-                console.log(event.type, data)
-                return
-            }
-            console.log(event.type)
-        },
-        handleMouseMoveEvent(e) {
-            this.x = e.offsetX
-            this.y = e.offsetY
+        toggleFav(book){
+            book.isFav = !book.isFav
         }
     }
 })
